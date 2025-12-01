@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Name | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+      padding: 24px 16px 48px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 32px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      font-size: 12px;
+      border-radius: 999px;
+      background: #1f2937;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #9ca3af;
+      font-size: 14px;
+      max-width: 560px;
+    }
+
+    .links {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .links a {
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+      text-decoration: none;
+      color: #e5e7eb;
+    }
+
+    .links a:hover {
+      background: #111827;
+    }
+
+    section {
+      margin-top: 32px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 6px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      background: #020617;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #1f2937;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
+    }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .project-meta {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+
+    .project-desc {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #111827;
+      color: #9ca3af;
+      border: 1px solid #1f2937;
+    }
+
+    .card-links {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .card-links a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #93c5fd;
+    }
+
+    .card-links a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+      body {
+        padding-top: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="tag">Portfolio</div>
+      <h1>Your Name</h1>
+      <p class="subtitle">
+        Brief line about you – e.g. “Working at the intersection of AI, hydrology, and financial products.
+        I like turning messy real-world problems into data-driven tools.”
+      </p>
+      <div class="links">
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
+        <a href="mailto:your.email@example.com">Email</a>
+        <!-- Add LinkedIn / website if you want -->
+        <!-- <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> -->
+      </div>
+    </header>
+
+    <!-- HYDROLOGY & GEOSPATIAL -->
+    <section>
+      <h2>Hydrology & Geospatial</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-title">CoRE Landscape Validation Tool</div>
+          <div class="project-meta">Validation of irrigation structures · GEE · QGIS · Python · React</div>
+          <p class="project-desc">
+            End-to-end workflow to check whether demanded irrigation structures are hydrologically suitable,
+            using slope, catchment area, drainage proximity, stream order, and LULC rules.
+          </p>
+          <div class="tag-list">
+            <span class="pill">Google Earth Engine</span>
+            <span class="pill">QGIS</span>
+            <span class="pill">Flask / React</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/core-landscape-validation" target="_blank">Code</a>
+            <!-- <a href="LINK_TO_SLIDES" target="_blank">Slides</a> -->
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">ET Downscaling with Machine Learning</div>
+          <div class="project-meta">MODIS ET · Landsat NDVI/LST · XGBoost/Random Forest</div>
+          <p class="project-desc">
+            Downscaled coarse-resolution MODIS evapotranspiration to field-scale using vegetation indices,
+            land surface temperature, and climate variables to support village-level water planning.
+          </p>
+          <div class="tag-list">
+            <span class="pill">Python</span>
+            <span class="pill">XGBoost</span>
+            <span class="pill">Remote Sensing</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/et-downscaling-ml" target="_blank">Code</a>
+            <!-- <a href="LINK_TO_REPORT" target="_blank">Report</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI / HCI / APPS -->
+    <section>
+      <h2>AI, HCI & Applications</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-title">AI Journaling Assistant</div>
+          <div class="project-meta">React · Flask/FastAPI · OpenAI</div>
+          <p class="project-desc">
+            A journaling web app where users log daily entries and receive AI-generated reflections,
+            mood trends, and small actionable suggestions over time.
+          </p>
+          <div class="tag-list">
+            <span class="pill">React</span>
+            <span class="pill">Python API</span>
+            <span class="pill">PostgreSQL / SQLite</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/ai-journal-app" target="_blank">Code</a>
+            <!-- <a href="#" target="_blank">Live Demo</a> -->
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Avatar Interaction / HCI Prototype</div>
+          <div class="project-meta">Three.js · React Three Fiber</div>
+          <p class="project-desc">
+            Interactive 3D avatar prototype with facial expressions and basic animation,
+            exploring more natural ways of interacting with AI systems.
+          </p>
+          <div class="tag-list">
+            <span class="pill">Three.js</span>
+            <span class="pill">React</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/avatar-prototype" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCE & PRODUCT -->
+    <section>
+      <h2>Finance & Product Experiments</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-title">Goal-based Investment Planner</div>
+          <div class="project-meta">Personal finance · Excel / Python / Power BI</div>
+          <p class="project-desc">
+            Tool to map SIPs and holdings to specific goals, simulate growth, and
+            highlight shortfalls for HNI / UHNI clients in a simple visual dashboard.
+          </p>
+          <div class="tag-list">
+            <span class="pill">Excel</span>
+            <span class="pill">Power BI</span>
+            <span class="pill">Portfolio Analytics</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/goal-planner" target="_blank">Templates</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Risk–Return Explorer</div>
+          <div class="project-meta">Mutual Funds · Python · Data Viz</div>
+          <p class="project-desc">
+            Small analysis notebooks to compare SIP portfolios, compute risk/return metrics,
+            and visualize how different allocations affect long-term outcomes.
+          </p>
+          <div class="tag-list">
+            <span class="pill">Python</span>
+            <span class="pill">Matplotlib</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/portfolio-analysis" target="_blank">Notebooks</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSEWORK / ASSIGNMENTS -->
+    <section>
+      <h2>Coursework & Assignments</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-title">MNIST CNN & Attention Experiments</div>
+          <div class="project-meta">PyTorch · Computer Vision</div>
+          <p class="project-desc">
+            Series of assignments exploring CNNs on MNIST, image captioning with BLIP,
+            and patch-similarity / self-attention visualizations.
+          </p>
+          <div class="tag-list">
+            <span class="pill">PyTorch</span>
+            <span class="pill">Computer Vision</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/cv-assignments" target="_blank">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Last updated: 2025 · Built with plain HTML & CSS, hosted on GitHub Pages.
+    </footer>
+  </div>
+</body>
+</html>
