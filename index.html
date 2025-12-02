@@ -46,6 +46,39 @@
       object-fit: cover;
     }
 
+
+    /* CONTACT ROW */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 12px 0 20px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .contact-item {
+      min-width: 180px;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #777;
+      margin-bottom: 4px;
+    }
+
+    .contact-item a {
+      font-size: 14px;
+      color: #222;
+      text-decoration: none;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+
     /* PROJECTS */
     .section-title {
       font-size: 20px;
@@ -121,15 +154,39 @@
       <div>
         <h1>Hi, I’m Vaishnavi.</h1>
         <p>
-          I work across human–computer interaction, cognitive AI, and social computing. 
-          My interest is in understanding how people think and designing systems that support them. 
-          I like turning complex problems into clear, interactive solutions that are easy to use.
+          I work at the intersection of human–computer interaction, cognitive AI, and social computing.
+          I focus on understanding people’s needs and building systems that fit naturally into their workflows.
+          I enjoy breaking complex problems into simple, intuitive, and interactive solutions.
         </p>
+
       </div>
 
       <!-- Replace with your image -->
       <img src="profile.jpg" alt="Vaishnavi" />
     </section>
+
+
+  <section class="contact">
+    <div class="contact-item">
+      <div class="contact-label">Email</div>
+      <a href="mailto:your.email@example.com">your.email@example.com</a>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-label">GitHub</div>
+      <a href="https://github.com/Vaishnavi-cyber-blip" target="_blank">
+        github.com/Vaishnavi-cyber-blip
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-label">LinkedIn</div>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+        linkedin.com/in/your-profile
+      </a>
+    </div>
+  </section>
+
 
     <!-- PROJECTS -->
     <h2 class="section-title">Projects and Experiments</h2>
