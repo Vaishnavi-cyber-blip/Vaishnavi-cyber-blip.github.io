@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name | Portfolio</title>
+  <title>Vaishnavi | Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     * {
@@ -13,318 +13,210 @@
     }
 
     body {
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-      padding: 24px 16px 48px;
+      background: #f5f5f7;
+      color: #111827;
+      padding: 32px 16px 48px;
     }
 
-    .container {
+    .page {
       max-width: 960px;
       margin: 0 auto;
     }
 
-    header {
-      margin-bottom: 32px;
+    /* --- INTRO SECTION --- */
+    .intro {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
     }
 
-    .tag {
-      display: inline-block;
-      padding: 2px 10px;
-      font-size: 12px;
-      border-radius: 999px;
-      background: #1f2937;
-      color: #9ca3af;
+    .intro-text h1 {
+      font-size: 28px;
       margin-bottom: 8px;
     }
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+    .intro-text p {
+      font-size: 15px;
+      color: #4b5563;
+      max-width: 380px;
     }
 
-    .subtitle {
-      color: #9ca3af;
-      font-size: 14px;
-      max-width: 560px;
+    .intro-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
-    .links {
-      margin-top: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .links a {
-      font-size: 14px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid #4b5563;
-      text-decoration: none;
-      color: #e5e7eb;
-    }
-
-    .links a:hover {
-      background: #111827;
-    }
-
-    section {
-      margin-top: 32px;
-    }
-
-    section h2 {
-      font-size: 20px;
-      margin-bottom: 12px;
-      border-bottom: 1px solid #1f2937;
-      padding-bottom: 6px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-    }
-
-    .project-card {
-      background: #020617;
-      border-radius: 12px;
-      padding: 16px;
-      border: 1px solid #1f2937;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .intro-avatar img {
+      width: 100%;
       height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    .project-title {
-      font-size: 16px;
+    /* --- PROJECTS SECTION --- */
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-size: 20px;
       font-weight: 600;
     }
 
-    .project-meta {
-      font-size: 12px;
-      color: #9ca3af;
-    }
-
-    .project-desc {
-      font-size: 14px;
-      color: #d1d5db;
-    }
-
-    .tag-list {
+    .projects {
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .project-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .project-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .project-image {
+      width: 200px;
+      height: 260px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #e5e7eb;
+      flex-shrink: 0;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-caption {
+      font-size: 11px;
+      text-align: center;
+      color: #6b7280;
       margin-top: 4px;
     }
 
-    .pill {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: #111827;
-      color: #9ca3af;
-      border: 1px solid #1f2937;
+    .project-text {
+      flex: 1;
+      font-size: 15px;
+      color: #374151;
+      line-height: 1.7;
     }
 
-    .card-links {
-      margin-top: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .project-text h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #111827;
     }
 
-    .card-links a {
-      font-size: 12px;
-      text-decoration: none;
-      color: #93c5fd;
-    }
-
-    .card-links a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: #6b7280;
-      text-align: center;
-    }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 40px;
-      }
+    /* --- RESPONSIVE --- */
+    @media (max-width: 720px) {
       body {
-        padding-top: 40px;
+        padding-top: 20px;
+      }
+
+      .intro {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro-avatar {
+        width: 130px;
+        height: 130px;
+      }
+
+      .project-row,
+      .project-row.reverse {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .project-image {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+      }
+
+      .project-image img {
+        height: auto;
+      }
+
+      .project-text {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="tag">Portfolio</div>
-      <h1>Your Name</h1>
-      <p class="subtitle">
-        Brief line about you – e.g. “Working at the intersection of AI, hydrology, and financial products.
-        I like turning messy real-world problems into data-driven tools.”
-      </p>
-      <div class="links">
-        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a>
-        <a href="mailto:your.email@example.com">Email</a>
-        <!-- Add LinkedIn / website if you want -->
-        <!-- <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> -->
+  <main class="page">
+    <!-- INTRO / HERO -->
+    <section class="intro">
+      <div class="intro-text">
+        <h1>Hi, Vaishnavi this side 👋</h1>
+        <p>
+          A short line about you here. For example: 
+          “I work on geospatial tools, AI experiments, and finance/product side projects —
+          trying to turn messy real-world problems into simple tools.”
+        </p>
       </div>
-    </header>
-
-    <!-- HYDROLOGY & GEOSPATIAL -->
-    <section>
-      <h2>Hydrology & Geospatial</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">CoRE Landscape Validation Tool</div>
-          <div class="project-meta">Validation of irrigation structures · GEE · QGIS · Python · React</div>
-          <p class="project-desc">
-            End-to-end workflow to check whether demanded irrigation structures are hydrologically suitable,
-            using slope, catchment area, drainage proximity, stream order, and LULC rules.
-          </p>
-          <div class="tag-list">
-            <span class="pill">Google Earth Engine</span>
-            <span class="pill">QGIS</span>
-            <span class="pill">Flask / React</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/core-landscape-validation" target="_blank">Code</a>
-            <!-- <a href="LINK_TO_SLIDES" target="_blank">Slides</a> -->
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">ET Downscaling with Machine Learning</div>
-          <div class="project-meta">MODIS ET · Landsat NDVI/LST · XGBoost/Random Forest</div>
-          <p class="project-desc">
-            Downscaled coarse-resolution MODIS evapotranspiration to field-scale using vegetation indices,
-            land surface temperature, and climate variables to support village-level water planning.
-          </p>
-          <div class="tag-list">
-            <span class="pill">Python</span>
-            <span class="pill">XGBoost</span>
-            <span class="pill">Remote Sensing</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/et-downscaling-ml" target="_blank">Code</a>
-            <!-- <a href="LINK_TO_REPORT" target="_blank">Report</a> -->
-          </div>
-        </div>
+      <div class="intro-avatar">
+        <!-- Replace profile.jpg with your own image file or an online image URL -->
+        <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt="Vaishnavi" />
       </div>
     </section>
 
-    <!-- AI / HCI / APPS -->
-    <section>
-      <h2>AI, HCI & Applications</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">AI Journaling Assistant</div>
-          <div class="project-meta">React · Flask/FastAPI · OpenAI</div>
-          <p class="project-desc">
-            A journaling web app where users log daily entries and receive AI-generated reflections,
-            mood trends, and small actionable suggestions over time.
-          </p>
-          <div class="tag-list">
-            <span class="pill">React</span>
-            <span class="pill">Python API</span>
-            <span class="pill">PostgreSQL / SQLite</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/ai-journal-app" target="_blank">Code</a>
-            <!-- <a href="#" target="_blank">Live Demo</a> -->
-          </div>
-        </div>
+    <!-- PROJECTS -->
+    <h2 class="section-title">Projects</h2>
 
-        <div class="project-card">
-          <div class="project-title">Avatar Interaction / HCI Prototype</div>
-          <div class="project-meta">Three.js · React Three Fiber</div>
-          <p class="project-desc">
-            Interactive 3D avatar prototype with facial expressions and basic animation,
-            exploring more natural ways of interacting with AI systems.
-          </p>
-          <div class="tag-list">
-            <span class="pill">Three.js</span>
-            <span class="pill">React</span>
+    <section class="projects">
+      <!-- PROJECT 1 -->
+      <article class="project-row">
+        <div>
+          <div class="project-image">
+            <!-- project image -->
+            <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt="Project 1 image" />
           </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/avatar-prototype" target="_blank">Code</a>
-          </div>
+          <div class="project-caption">image of project</div>
         </div>
-      </div>
+        <div class="project-text">
+          <h3>Project 1 – Title here</h3>
+          Aim of the project, technologies used, what you learnt from it, and what you actually did /
+          current progress. Write this like 3–4 sentences in simple language so that a professor or recruiter
+          can quickly understand your role.
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project-row reverse">
+        <div>
+          <div class="project-image">
+            <!-- project image -->
+            <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt="Project 2 image" />
+          </div>
+          <div class="project-caption">image of project</div>
+        </div>
+        <div class="project-text">
+          <h3>Project 2 – Title here</h3>
+          Aim of the project, technologies used, what you learnt from it, and what you exactly did /
+          progress. Again, keep it short and focused on your contribution and outcomes.
+        </div>
+      </article>
+
+      <!-- You can copy–paste another .project-row block for more projects -->
     </section>
-
-    <!-- FINANCE & PRODUCT -->
-    <section>
-      <h2>Finance & Product Experiments</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">Goal-based Investment Planner</div>
-          <div class="project-meta">Personal finance · Excel / Python / Power BI</div>
-          <p class="project-desc">
-            Tool to map SIPs and holdings to specific goals, simulate growth, and
-            highlight shortfalls for HNI / UHNI clients in a simple visual dashboard.
-          </p>
-          <div class="tag-list">
-            <span class="pill">Excel</span>
-            <span class="pill">Power BI</span>
-            <span class="pill">Portfolio Analytics</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/goal-planner" target="_blank">Templates</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">Risk–Return Explorer</div>
-          <div class="project-meta">Mutual Funds · Python · Data Viz</div>
-          <p class="project-desc">
-            Small analysis notebooks to compare SIP portfolios, compute risk/return metrics,
-            and visualize how different allocations affect long-term outcomes.
-          </p>
-          <div class="tag-list">
-            <span class="pill">Python</span>
-            <span class="pill">Matplotlib</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/portfolio-analysis" target="_blank">Notebooks</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COURSEWORK / ASSIGNMENTS -->
-    <section>
-      <h2>Coursework & Assignments</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">MNIST CNN & Attention Experiments</div>
-          <div class="project-meta">PyTorch · Computer Vision</div>
-          <p class="project-desc">
-            Series of assignments exploring CNNs on MNIST, image captioning with BLIP,
-            and patch-similarity / self-attention visualizations.
-          </p>
-          <div class="tag-list">
-            <span class="pill">PyTorch</span>
-            <span class="pill">Computer Vision</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/cv-assignments" target="_blank">Code</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      Last updated: 2025 · Built with plain HTML & CSS, hosted on GitHub Pages.
-    </footer>
-  </div>
+  </main>
 </body>
 </html>
