@@ -2,70 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vaishnavi | Projects</title>
+  <title>Vaishnavi | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
     body {
-      background: #f5f5f7;
-      color: #111827;
-      padding: 32px 16px 48px;
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #ffffff;
+      color: #222;
+      padding: 24px;
     }
 
     .page {
-      max-width: 960px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: auto;
     }
 
-    /* --- INTRO SECTION --- */
+    /* INTRO */
     .intro {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 32px 28px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e5e5;
     }
 
-    .intro-text h1 {
+    .intro h1 {
       font-size: 28px;
       margin-bottom: 8px;
     }
 
-    .intro-text p {
+    .intro p {
       font-size: 15px;
-      color: #4b5563;
-      max-width: 380px;
+      color: #555;
+      max-width: 70%;
     }
 
-    .intro-avatar {
-      width: 160px;
-      height: 160px;
+    .intro img {
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .intro-avatar img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
-      display: block;
     }
 
-    /* --- PROJECTS SECTION --- */
+    /* PROJECTS */
     .section-title {
-      margin-top: 40px;
-      margin-bottom: 16px;
       font-size: 20px;
+      margin: 32px 0 16px;
       font-weight: 600;
     }
 
@@ -77,146 +61,117 @@
 
     .project-row {
       display: flex;
-      align-items: center;
       gap: 24px;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #eee;
     }
 
     .project-row.reverse {
       flex-direction: row-reverse;
     }
 
-    .project-image {
-      width: 200px;
-      height: 260px;
-      overflow: hidden;
-      border-radius: 12px;
-      background: #e5e7eb;
-      flex-shrink: 0;
-    }
-
     .project-image img {
-      width: 100%;
-      height: 100%;
+      width: 180px;
+      height: 220px;
       object-fit: cover;
-      display: block;
-    }
-
-    .project-caption {
-      font-size: 11px;
-      text-align: center;
-      color: #6b7280;
-      margin-top: 4px;
-    }
-
-    .project-text {
-      flex: 1;
-      font-size: 15px;
-      color: #374151;
-      line-height: 1.7;
+      border-radius: 6px;
+      background: #f0f0f0;
     }
 
     .project-text h3 {
-      font-size: 17px;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: #111827;
+      margin-bottom: 10px;
+      font-size: 18px;
     }
 
-    /* --- RESPONSIVE --- */
-    @media (max-width: 720px) {
-      body {
-        padding-top: 20px;
-      }
+    .project-text p {
+      margin: 4px 0;
+      font-size: 15px;
+      line-height: 1.5;
+    }
 
+    .label {
+      font-weight: 600;
+      color: #111;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
       .intro {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .intro-avatar {
-        width: 130px;
-        height: 130px;
+      .intro img {
+        align-self: center;
       }
 
-      .project-row,
-      .project-row.reverse {
+      .project-row, .project-row.reverse {
         flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .project-image {
-        width: 100%;
-        max-width: 260px;
-        height: auto;
-      }
-
-      .project-image img {
-        height: auto;
-      }
-
-      .project-text {
-        width: 100%;
       }
     }
   </style>
 </head>
+
 <body>
   <main class="page">
-    <!-- INTRO / HERO -->
+
+    <!-- INTRO BLOCK -->
     <section class="intro">
-      <div class="intro-text">
+      <div>
         <h1>Hi, Vaishnavi this side 👋</h1>
         <p>
-          A short line about you here. For example: 
-          “I work on geospatial tools, AI experiments, and finance/product side projects —
-          trying to turn messy real-world problems into simple tools.”
+          Short intro line here. Example:  
+          “I work across geospatial analytics, AI tools, and product ideas.  
+          I enjoy simplifying complex problems into practical solutions.”
         </p>
       </div>
-      <div class="intro-avatar">
-        <!-- Replace profile.jpg with your own image file or an online image URL -->
-        <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt="Vaishnavi" />
-      </div>
+
+      <!-- Replace with your image -->
+      <img src="https://images.pexels.com/photos/1231234/pexels-photo.jpg" alt="Vaishnavi" />
     </section>
 
     <!-- PROJECTS -->
     <h2 class="section-title">Projects</h2>
 
     <section class="projects">
+
       <!-- PROJECT 1 -->
       <article class="project-row">
-        <div>
-          <div class="project-image">
-            <!-- project image -->
-            <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt="Project 1 image" />
-          </div>
-          <div class="project-caption">image of project</div>
+        <div class="project-image">
+          <img src="https://images.pexels.com/photos/1231234/pexels-photo.jpg" alt="Project Image" />
         </div>
+
         <div class="project-text">
-          <h3>Project 1 – Title here</h3>
-          Aim of the project, technologies used, what you learnt from it, and what you actually did /
-          current progress. Write this like 3–4 sentences in simple language so that a professor or recruiter
-          can quickly understand your role.
+          <h3>Project Title 1</h3>
+
+          <p><span class="label">Problem:</span> Explain the main issue the project solves.</p>
+          <p><span class="label">Tool/Approach:</span> What method or workflow you used.</p>
+          <p><span class="label">Technologies:</span> Python, GEE, React, etc.</p>
+          <p><span class="label">Progress:</span> What is done so far, and next steps.</p>
         </div>
       </article>
 
       <!-- PROJECT 2 -->
       <article class="project-row reverse">
-        <div>
-          <div class="project-image">
-            <!-- project image -->
-            <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" alt="Project 2 image" />
-          </div>
-          <div class="project-caption">image of project</div>
+        <div class="project-image">
+          <img src="https://images.pexels.com/photos/1231234/pexels-photo.jpg" alt="Project Image" />
         </div>
+
         <div class="project-text">
-          <h3>Project 2 – Title here</h3>
-          Aim of the project, technologies used, what you learnt from it, and what you exactly did /
-          progress. Again, keep it short and focused on your contribution and outcomes.
+          <h3>Project Title 2</h3>
+
+          <p><span class="label">Problem:</span> What issue this project addresses.</p>
+          <p><span class="label">Tool/Approach:</span> What system or method you designed.</p>
+          <p><span class="label">Technologies:</span> XGBoost, Landsat, QGIS, etc.</p>
+          <p><span class="label">Progress:</span> What you achieved and what’s next.</p>
         </div>
       </article>
 
-      <!-- You can copy–paste another .project-row block for more projects -->
+      <!-- Copy & paste more projects here -->
     </section>
+
   </main>
 </body>
 </html>
+
