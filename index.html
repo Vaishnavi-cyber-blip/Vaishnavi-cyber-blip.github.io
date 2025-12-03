@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Vaishnavi | Portfolio</title>
+  <title>Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -15,38 +15,48 @@
 
     .page {
       max-width: 900px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     /* INTRO */
     .intro {
-      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
       border-bottom: 1px solid #e5e5e5;
     }
 
     .intro h1 {
-      font-size: 26px;
+      font-size: 28px;
       margin-bottom: 8px;
     }
 
     .intro p {
       font-size: 15px;
       color: #555;
-      line-height: 1.6;
+      max-width: 70%;
     }
 
-    /* CONTACT */
+    .intro img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* CONTACT ROW */
     .contact {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 20px;
       padding: 12px 0 20px;
       border-bottom: 1px solid #e5e5e5;
-      margin-top: 12px;
     }
 
     .contact-item {
-      font-size: 14px;
+      min-width: 180px;
     }
 
     .contact-label {
@@ -54,10 +64,11 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: #777;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .contact-item a {
+      font-size: 14px;
       color: #222;
       text-decoration: none;
     }
@@ -69,51 +80,97 @@
     /* PROJECTS */
     .section-title {
       font-size: 20px;
-      margin: 28px 0 12px;
+      margin: 32px 0 16px;
       font-weight: 600;
     }
 
-    .project {
-      border-top: 1px solid #eee;
-      padding-top: 16px;
-      margin-top: 16px;
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
 
-    .project h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
+    /* image left + text right card */
+    .project-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
     }
 
-    .project img {
+    .project-image-box {
+      width: 220px;      /* image size */
+      height: 140px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid #ddd;
+      background: #f8f8f8;
+    }
+
+    .project-image-box img {
       width: 100%;
-      max-width: 360px;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      display: block;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .project p {
-      font-size: 14px;
-      margin: 4px 0;
+    .project-text-box {
+      flex: 1;
+      font-size: 15px;
       line-height: 1.5;
     }
 
-    .project strong {
-      font-weight: 600;
+    .project-text-box h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .project-text-box p {
+      margin: 4px 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
+      .intro {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro img {
+        align-self: center;
+      }
+
+      .project-card {
+        flex-direction: column;
+      }
+
+      .project-image-box {
+        width: 100%;
+        height: 180px;
+      }
     }
   </style>
 </head>
 <body>
   <main class="page">
 
-    <!-- INTRO -->
+    <!-- INTRO BLOCK -->
     <section class="intro">
-      <h1>Hi, I’m Vaishnavi.</h1>
-      <p>
-        I work at the intersection of human–computer interaction, cognitive AI, and social computing.
-        I care about making complex technology intuitive and accessible for people who are not tech-savvy,
-        especially in under-resourced contexts.
-      </p>
+      <div>
+        <h1>Hi, I’m Vaishnavi.</h1>
+        <p>
+          I work at the intersection of human–computer interaction, cognitive AI, and social computing.
+          Growing up around people who are not tech-savvy, including my own family, made me aware of how wide the gap is between everyday users and the systems meant to support them. This gap is even sharper in India, where the pace of technological development often outstrips the ability of many communities to meaningfully engage with it.
+          My experiences shape three directions I particularly want to pursue in my research:
+          (1) building systems that take a ground-up approach, where technology adapts to real needs and constraints rather than expecting people to adapt to it;
+          (2) designing transparent and reliable systems whose behavior aligns with human mental models; and
+          (3) simplifying complex technologies so they are cognitively intuitive and can blend naturally into people’s lives, especially for users who are under-resourced, first-time digital users.
+        </p>
+      </div>
+
+      <!-- Replace with your image -->
+      <img src="profile.jpg" alt="Vaishnavi" />
     </section>
 
     <!-- CONTACT -->
@@ -141,31 +198,45 @@
     <!-- PROJECTS -->
     <h2 class="section-title">Projects and Experiments</h2>
 
-    <!-- PROJECT 1 -->
-    <section class="project">
-      <h3>Project Title 1</h3>
-      <!-- remove this <img> line if you don't want an image -->
-      <img src="images/p1.webp" alt="Project 1 image">
-      <p><strong>Problem:</strong> Explain the main issue the project solves.</p>
-      <p><strong>Approach:</strong> What method or workflow you used.</p>
-      <p><strong>Technologies:</strong> Python, GEE, React, etc.</p>
-      <p><strong>Status:</strong> What is done so far, and next steps.</p>
-    </section>
+    <section class="projects">
 
-    <!-- PROJECT 2 -->
-    <section class="project">
-      <h3>Project Title 2</h3>
-      <img src="images/p2.jpg" alt="Project 2 image">
-      <p><strong>Problem:</strong> What issue this project addresses.</p>
-      <p><strong>Approach:</strong> What system or method you designed.</p>
-      <p><strong>Technologies:</strong> XGBoost, Landsat, QGIS, etc.</p>
-      <p><strong>Status:</strong> What you achieved and what’s next.</p>
-    </section>
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <div class="project-image-box">
+          <img src="images/project1.png" alt="Project 1 Image">
+        </div>
 
-    <!-- copy the block above to add more projects -->
+        <div class="project-text-box">
+          <h3>Project Title 1</h3>
+          <p><strong>Problem:</strong> Explain the main issue the project solves.</p>
+          <p><strong>Tool/Approach:</strong> What method or workflow you used.</p>
+          <p><strong>Technologies:</strong> Python, GEE, React, etc.</p>
+          <p><strong>Progress:</strong> What is done so far, and next steps.</p>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <div class="project-image-box">
+          <img src="images/project2.png" alt="Project 2 Image">
+        </div>
+
+        <div class="project-text-box">
+          <h3>Project Title 2</h3>
+          <p><strong>Problem:</strong> What issue this project addresses.</p>
+          <p><strong>Tool/Approach:</strong> What system or method you designed.</p>
+          <p><strong>Technologies:</strong> XGBoost, Landsat, QGIS, etc.</p>
+          <p><strong>Progress:</strong> What you achieved and what’s next.</p>
+        </div>
+      </div>
+
+      <!-- copy the block above for more projects -->
+
+    </section>
 
   </main>
 </body>
 </html>
+
 
 
