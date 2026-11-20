@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConvEval: Task-Aware Evaluation of Conversational Agricultural Advisory — Vaishnavi Yadav</title>
+<meta name="description" content="Farming chatbots are usually judged one answer at a time, but advice happens over a conversation. I critiqued an existing evaluation tool, built a test chatbot, and built a lighter evaluator that scores whole conversations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<header class="phead">
+  <a class="back" href="../index.html#research">&#8592; Vaishnavi Yadav &middot; all research</a>
+  <div class="kicker">AI evaluation &middot; Agriculture &middot; Gates Foundation AI Fellowship India 2026</div>
+  <h1>ConvEval: Task-Aware Evaluation of Conversational Agricultural Advisory</h1>
+  <p class="lede">Farming chatbots are usually judged one answer at a time, but advice happens over a conversation. I critiqued an existing evaluation tool, built a test chatbot, and built a lighter evaluator that scores whole conversations.</p>
+  <span class="status">Finalist &middot; Agriculture track, selected through five competitive rounds</span>
+  <dl class="glance"><div><dt>My role</dt><dd>Built the critique, KisanBot and ConvEval</dd></div><div><dt>Programme</dt><dd>Gates Foundation ICO AI Fellows, India 2026</dd></div><div><dt>Parts</dt><dd>Critique, KisanBot, ConvEval</dd></div><div><dt>Built with</dt><dd>Python, Streamlit, Gemini Flash</dd></div></dl>
+</header>
+<div class="layout">
+  <nav class="toc" aria-label="On this page"><b>On this page</b><a href="#app">The app</a><a href="#problem">The problem</a><a href="#parts">Three parts</a><a href="#decisions">Design decisions</a><a href="#why">Why it matters for HCI</a><a href="#links">Links</a></nav>
+  <article><section id="app"><h2>The app</h2><figure class="zoom"><img src="../media/conveval-app.png" alt="ConvEval app home: KisanBot, Evaluate, Results and Critique sections, with key design decisions." loading="lazy"><figcaption>The ConvEval app: chat with KisanBot, run an evaluation, inspect results, read the critique. <span style="float:right">Click to enlarge</span></figcaption></figure></section><section id="problem"><h2>The problem</h2><p>Real advice happens over a conversation. The farmer adds details, the assistant should ask for what is missing, and the advice is only useful if the whole exchange gets the task done. The fellowship asked us to examine IIT Madras's CeRAI AI Evaluation Tool and propose something better.</p></section><section id="parts"><h2>Three parts</h2><div class="cards three"><div class="card"><span class="tag">1</span><b>Critique of CeRAI</b><p>GitHub issues on the CeRAI tool, each grounded in its source code (data points, importer, strategy map).</p></div><div class="card"><span class="tag">2</span><b>KisanBot</b><p>A farming assistant for rural India covering agriculture, health and education questions: the system under test.</p></div><div class="card"><span class="tag">3</span><b>ConvEval</b><p>A minimal evaluator with task-aware metrics, debiased judging and no special hardware.</p></div></div></section><section id="decisions"><h2>Design decisions</h2><details open><summary>Metrics follow the task</summary><div>Each conversation's task type decides which metrics apply, so a diagnosis conversation is not judged like a weather question.</div></details><details><summary>Semantic judging, not BLEU/ROUGE</summary><div>Word-overlap scores miss whether advice is right for the farmer, so an LLM judge scores meaning.</div></details><details><summary>Swap-order debiasing</summary><div>LLM judges favour whichever answer they see first. The judge sees answers in both orders, and each score comes with a confidence interval.</div></details><details><summary>Runs anywhere, reproducibly</summary><div>An API judge (Gemini Flash) needs no GPU, and evaluating a live REST endpoint keeps runs reproducible.</div></details></section><section id="why"><h2>Why it matters for HCI</h2><div class="callout"><b>Judge the interaction, not the output</b>An AI system should be judged on whether it helps a person in their actual situation, over the whole interaction. The same idea shaped how I evaluated <a href="pip.html">Pip</a>.</div></section><section id="links"><h2>Links</h2><div class="plinks"><a class="main" href="https://kissanbot-4sx33czhcknbhc7w9zzixc.streamlit.app/" target="_blank" rel="noopener">Open the ConvEval app</a></div><p class="small" style="margin-top:6px">It asks for a free Gemini API key from aistudio.google.com; the app may take a moment to wake.</p></section></article>
+</div>
+<div class="more"><h2>More research</h2><div class="mgrid"><a href="pip.html"><img src="../media/thumbs/pip.jpg" alt="" loading="lazy"><span>Pip: GIF explanations for screen-reader users</span></a><a href="adaptive-wearables-review.html"><img src="../media/thumbs/review.jpg" alt="" loading="lazy"><span>Review: user-aware adaptive wearables</span></a><a href="scroll-timing.html"><img src="../media/thumbs/scroll.svg" alt="" loading="lazy"><span>Breaking the scroll at the right moment</span></a><a href="smartwatch-data.html"><img src="../media/thumbs/smartwatch.jpg" alt="" loading="lazy"><span>Making sense of smartwatch data</span></a><a href="core-stack.html"><img src="../media/thumbs/core-stack.jpg" alt="" loading="lazy"><span>CoRE Stack: water-harvesting site suitability</span></a></div></div>
+<footer>&copy; 2026 Vaishnavi Yadav &middot; <a href="../index.html">Home</a> &middot; <a href="mailto:ivanhsiav18@gmail.com">ivanhsiav18@gmail.com</a></footer>
+<script src="project.js"></script>
+</body>
+</html>
